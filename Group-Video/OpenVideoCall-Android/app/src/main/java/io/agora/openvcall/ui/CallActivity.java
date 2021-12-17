@@ -373,7 +373,9 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
     private void doConfigEngine(String encryptionKey, String encryptionMode) {
         VideoEncoderConfiguration.VideoDimensions videoDimension = ConstantApp.VIDEO_DIMENSIONS[getVideoEncResolutionIndex()];
         VideoEncoderConfiguration.FRAME_RATE videoFps = ConstantApp.VIDEO_FPS[getVideoEncFpsIndex()];
-        configEngine(videoDimension, videoFps, encryptionKey, encryptionMode);
+        
+        // configEngine(videoDimension, videoFps, encryptionKey, encryptionMode);
+        configEngine(VideoEncoderConfiguration.VD_1280x720, VideoEncoderConfiguration.FRAME_RATE.FRAME_RATE_FPS_30, encryptionKey, encryptionMode);
     }
 
     public void onSwitchCameraClicked(View view) {
